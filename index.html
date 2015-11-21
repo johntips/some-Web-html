@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
 
     <!-- Demo styles -->
-     <style>
-     body {
+    <style>
+    body {
         background: #fff;
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
@@ -19,80 +19,43 @@
         padding: 0;
     }
     .swiper-container {
-        width: 33%;
+        width: 100%;
         padding-top: 50px;
-        padding-bottom: 150px;
+        padding-bottom: 50px;
     }
     .swiper-slide {
         background-position: center;
         background-size: cover;
         width: 300px;
         height: 300px;
-    }
-    .card{
 
     }
-    .caption{
-      margin-top:350px;
-    }
-     </style>
-    <script>
-		(function(){
-		    var _UA = navigator.userAgent;
-		    if (_UA.indexOf('iPhone') > -1 || _UA.indexOf('iPod') > -1) {
-		        document.write('<link rel="stylesheet" href="css/iphone.css">');
-		    }else if(_UA.indexOf('Android') > -1){
-		        document.write('<link rel="stylesheet" href="css/android.css">');
-		    }else{
-		        document.write('<link rel="stylesheet" href="css/pc.css">');
-		    }
-		})();
-</script>
+    </style>
 </head>
 <body>
     <!-- Swiper -->
-    <div class="card">
-	    <div class="swiper-container">
-	        <div class="swiper-wrapper">
-	            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/1)">
-	            	<p class="caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
-	            </div>
-	            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/2)">
-	            	<p class="caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
-	            </div>
-	            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/3)">
-	            	<p class="caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
-	            </div>
-	            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/4)">
-	            	<p class="caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
-	            </div>
-	            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/5)">
-	            	<p class="caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
-	            </div>
-	            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/6)">
-	            	<p class="caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
-	            </div>
-	            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/7)"></div>
-	            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/8)"></div>
-	            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/9)"></div>
-	            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/10)"></div>
-	        </div>
-	        <!-- Add Pagination -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+ 			<div class="swiper-slide" style="background-image:url(image/escape-20151120-190233-7.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(image/escape-20151120-191747-7.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(image/escape-20151120-185948-7.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(image/escape-20151120-185625-7.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(image/escape-20151120-191508-7.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(image/escape-20151120-185853-7.jpg)"></div>
+<!--             <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/7)"></div>
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/8)"></div>
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/9)"></div>
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/10)"></div> -->
+        </div>
+        <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
-    	</div>
-
     </div>
 
     <!-- Swiper JS -->
-    <script src="js/swiper.min.js"></script>
+    <script src="dist/js/swiper.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <scprit>
-
-    </scprit>
     <script>
-
-
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         effect: 'coverflow',
@@ -101,8 +64,8 @@
         slidesPerView: 'auto',
         coverflow: {
             rotate: 50,
-            stretch: 80,
-            depth: 100,
+            stretch: 20,
+            depth: 190,
             modifier: 1,
             slideShadows : true
         }
