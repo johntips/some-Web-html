@@ -8,7 +8,7 @@ body {
     }
     .swiper-container {
         width: 33%;
-        padding-top: 50px;
+        padding-top: 150px;
         padding-bottom: 150px;
     }
     .swiper-slide {
@@ -22,4 +22,11 @@ body {
     }
     .caption{
       margin-top:350px;
+    }
+    .swipe-caption{
+      margin-top:-60px;
+      color: rgba(0,0,0,0);
+    }
+    .swiper-slide-active .swipe-caption{
+      color: rgba(10,24,24,0.5);
     }

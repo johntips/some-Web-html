@@ -320,6 +320,7 @@ button.swiper-pagination-bullet {
 .swiper-container-fade .swiper-slide-active,
 .swiper-container-fade .swiper-slide-active .swiper-slide-active {
   pointer-events: auto;
+  color: rgba(0,0,0,1);
 }
 /* Cube */
 .swiper-container-cube {
