@@ -17,37 +17,43 @@
 		        document.write('<link rel="stylesheet" type="text/css" href="css/pc.css">');
 		    }
 	</script>
+	<!-- CSSの読み込み -->
+	<link rel="stylesheet" href="css/photoswipe.css">
+	<link rel="stylesheet" href="css/default-skin.css">
+
 </head>
 <body>
     <!-- Swiper -->
     <div class="swiper-container">
+
         <div class="swiper-wrapper">
- 			<div class="swiper-slide" style="background-image:url(image/escape-20151120-190233-7.jpg)">
+
+ 			<div id="img1-1" class="swiper-slide " style="background-image:url(image/escape-20151120-190233-7.jpg)" onclick="klikaj(this)">
  				<p class="swipe-caption">BBQブロックパーティーで私たちがオーダーしたお店は、『Sea Grill』のFiesta Plate。
 1プレートでお腹がしっかりと満たされる盛り沢山な内容のプレートのお値段＄12。
 お友達同士で行ってシェアするのがおすすめです☆
 </p>
  			</div>
-            <div class="swiper-slide" style="background-image:url(image/escape-20151120-191747-7.jpg)">
+            <div id="img1-2" class="swiper-slide" style="background-image:url(image/escape-20151120-191747-7.jpg)" onclick="klikaj(this)">
             	<p class="swipe-caption">マッチョなお兄様たちが、手際よくBOXに詰めてくれます。</p>
             </div>
-            <div class="swiper-slide" style="background-image:url(image/escape-20151120-185948-7.jpg)">
+            <div id="img1-3" class="swiper-slide" style="background-image:url(image/escape-20151120-185948-7.jpg)">
             	<p class="swipe-caption">ご満悦の美紀ぷん♡</p>
             </div>
-            <div class="swiper-slide" style="background-image:url(image/escape-20151120-185625-7.jpg)">
+            <div id="img1-4" class="swiper-slide" style="background-image:url(image/escape-20151120-185625-7.jpg)">
             	<p class="swipe-caption">メイン度通りのど真ん中を歩行者天国に！
 帰りは車が激混みなのでご注意を。</p>
             </div>
-            <div class="swiper-slide" style="background-image:url(image/escape-20151120-191508-7.jpg)">
+            <div id="img1-5" class="swiper-slide" style="background-image:url(image/escape-20151120-191508-7.jpg)">
             	<p class="swipe-caption">インスタで作ったのは貼れた。
 つまり容量で制限かけてる説濃厚</p>
             </div>
-            <div class="swiper-slide" style="background-image:url(image/escape-20151120-185853-7.jpg)">
+            <div id="img1-6" class="swiper-slide" style="background-image:url(image/escape-20151120-185853-7.jpg)">
             	<p class="swipe-caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
             </div>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination top20"></div>
     </div>
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -107,12 +113,79 @@
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
     </div>
+
+<h2>画像ギャラリー</h2>
+
+	<h3>figureタグ</h3>
+
+		<figure class="images">
+			<a href="image/escape-20151120-185853-7.jpg" data-size="350x350">
+				<img class="_img size350" src="image/escape-20151120-185853-7.jpg" alt="Syncerのロゴ" />
+			</a>
+			<figcaption>Syncerのロゴ</figcaption>
+		</figure>
+
+	<h3>pタグ</h3>
+
+		<p class="images">
+			<a href="image/escape-20151120-191747-7.jpg" data-size="350x350">
+				<img class="_img size350" src="image/escape-20151120-191747-7.jpg" alt="カピバラ" />
+			</a>
+		</p>
+
+
+
+<HR style="margin: 3em 0 ;">
+
+<div id="scrolling">
+<ul>
+    <li>
+        Slide #1
+    </li>
+    <li>
+        Slide #2
+    </li>
+</ul>
+</div>
+<form action="#">
+    <input type="button" name="btn" value="クリック" onclick="btnClick(this)" />
+</form>
+<div id="thumb0" class="thumbs" onclick="klikaj('rad1')">knock knock</div>
+​<div id="rad1" style="visibility: hidden">hello world</div>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
 
     <!-- Swiper JS -->
-    <script src="js/swiper.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="http://itemslide.github.io/dist/itemslide.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <script>
+<script>
+	function klikaj(obj) {
+	    alert(obj.style);
+	    var styles = getComputedStyle(obj);
+	    var id = String(obj.id);
+	    console.log(id);
+
+		var gallerysCount = id.replace(/img(.+)-(.+)/,"$1");
+		var galleryImgsCount = id.replace(/img(.+)-(.+)/,"$2");
+		console.log(gallerysCount);
+		console.log(galleryImgsCount);
+
+		//親クラスの特定、
+
+		//子クラスのリスト化
+		
+		//リスト内ファイルパスの配列挿入。
+
+
+	    var url = styles.backgroundImage;
+	    var seturl = styles.backgroundImage.replace(/^url\(|\)/g, "");
+	    console.log(seturl);
+
+	}
+	function btnClick(obj){
+        alert(obj);
+    }
+
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         effect: 'coverflow',
@@ -127,6 +200,34 @@
             slideShadows : true
         }
     });
-    </script>
+
+	var carousel;
+	carousel = $("ul");
+	carousel.itemslide(
+	    {
+	        disable_slide: true,
+	        duration: 1500
+	    }
+	);
+	console.log(carousel.getActiveIndex());
+		carousel.on('changePos', function(e) {
+	        console.log("new pos: "+ carousel.getCurrentPos());
+	});
+
+	carousel.on('swipeout', function(event) {
+	        console.log("swiped out slide - "+ event.slide);
+	});
+
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/photoswipe.min.js"></script>
+<script src="js/photoswipe-ui-default.min.js"></script>
+<script src="js/fire-photoswipe-customize.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
 </body>
 </html>

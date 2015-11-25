@@ -28,3 +28,8 @@ body {
     .swiper-slide-active .swipe-caption{
       color: rgba(10,24,24,0.5);
     }
+       .size350{
+      width: 280px;
+      height: 280px;
+    
+    }
