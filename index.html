@@ -163,28 +163,30 @@
 	    alert(obj.style);
 	    var styles = getComputedStyle(obj);
 	    var id = String(obj.id);
-	    console.log(id);
 
+	    //
 		var gallerysCount = id.replace(/img(.+)-(.+)/,"$1");
 		var galleryImgsCount = id.replace(/img(.+)-(.+)/,"$2");
+		var garraryUrlArray = [];
+		var length = obj.parentNode.children.length - 1 ;
+		//親クラスの特定、
+		var garraryElements = obj.parentNode.children;
+
+		console.log(length);
 		console.log(gallerysCount);
 		console.log(galleryImgsCount);
-
-		//親クラスの特定、
-
-		//子クラスのリスト化
-		
-		//リスト内ファイルパスの配列挿入。
+		console.log(garraryElements);
 
 
-	    var url = styles.backgroundImage;
-	    var seturl = styles.backgroundImage.replace(/^url\(|\)/g, "");
-	    console.log(seturl);
+		for (var i = 0; i < length; i++  ) {
+			var tmpurl  = garraryElements[i].style.backgroundImage;
+			var seturl = tmpurl.replace(/^url\(|\)/g, "");
+			garraryUrlArray.push(seturl);
+			console.log(garraryUrlArray);
+		}
 
 	}
-	function btnClick(obj){
-        alert(obj);
-    }
+
 
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
