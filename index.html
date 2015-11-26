@@ -26,27 +26,27 @@
 
         <div class="swiper-wrapper">
 
- 			<div id="img1-1" class="swiper-slide " style="background-image:url(image/escape-20151120-190233-7.jpg)" onclick="openGarraly(this)">
+ 			<div id="img1-1" class="swiper-slide " style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192422-7.jpg)" onclick="openGarraly(this)">
  				<p class="swipe-caption">BBQブロックパーティーで私たちがオーダーしたお店は、『Sea Grill』のFiesta Plate。
 1プレートでお腹がしっかりと満たされる盛り沢山な内容のプレートのお値段＄12。
 お友達同士で行ってシェアするのがおすすめです☆
 </p>
  			</div>
-            <div id="img1-2" class="swiper-slide" style="background-image:url(image/escape-20151120-191747-7.jpg)" onclick="openGarraly(this)">
+            <div id="img1-2" class="swiper-slide" style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192024-7.jpg)" onclick="openGarraly(this)">
             	<p class="swipe-caption">マッチョなお兄様たちが、手際よくBOXに詰めてくれます。</p>
             </div>
-            <div id="img1-3" class="swiper-slide" style="background-image:url(image/escape-20151120-185948-7.jpg)">
+            <div id="img1-3" class="swiper-slide" style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192335-7.jpg)">
             	<p class="swipe-caption">ご満悦の美紀ぷん♡</p>
             </div>
-            <div id="img1-4" class="swiper-slide" style="background-image:url(image/escape-20151120-185625-7.jpg)">
+            <div id="img1-4" class="swiper-slide" style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192422-7.jpg)">
             	<p class="swipe-caption">メイン度通りのど真ん中を歩行者天国に！
 帰りは車が激混みなのでご注意を。</p>
             </div>
-            <div id="img1-5" class="swiper-slide" style="background-image:url(image/escape-20151120-191508-7.jpg)">
+            <div id="img1-5" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)">
             	<p class="swipe-caption">インスタで作ったのは貼れた。
 つまり容量で制限かけてる説濃厚</p>
             </div>
-            <div id="img1-6" class="swiper-slide" style="background-image:url(image/escape-20151120-185853-7.jpg)">
+            <div id="img1-6" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)">
             	<p class="swipe-caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
             </div>
         </div>
@@ -185,136 +185,13 @@
 <script src="http://itemslide.github.io/dist/itemslide.min.js"></script>
 <script src='js/photoswipe.min.js'></script>
 <script src='js/photoswipe-ui-default.min.js'></script>
+<script src='js/index.js'></script>
     <!-- Initialize Swiper -->
 <script>
-	function klikaj(obj) {
 
-	    var styles = getComputedStyle(obj);
-	    var id = String(obj.id);
-
-	    //garraryに渡す、gararry番号、gararry内画像番号、gararry内画像番号配列、
-		var gallerysCount = id.replace(/img(.+)-(.+)/,"$1");
-		var galleryImgsCount = id.replace(/img(.+)-(.+)/,"$2");
-		var garraryUrlArray = [];
-		var length = obj.parentNode.children.length - 1 ;
-		//親クラスの特定、
-		var garraryElements = obj.parentNode.children;
-
-		console.log(length);
-		console.log(gallerysCount);
-		console.log(galleryImgsCount);
-		console.log(garraryElements);
-
-
-		for (var i = 0; i < length; i++  ) {
-			var tmpurl  = garraryElements[i].style.backgroundImage;
-			var seturl = tmpurl.replace(/^url\(|\)/g, "");
-			garraryUrlArray.push(seturl);
-		}
-		console.log(garraryUrlArray);
-
-	}
-	function openGarraly(obj){
-
-
-		var styles = getComputedStyle(obj);
-	    var id = String(obj.id);
-
-	    //garraryに渡す、gararry番号、gararry内画像番号、gararry内画像番号配列、
-		var gallerysCount = id.replace(/img(.+)-(.+)/,"$1");
-		var galleryImgsCount = id.replace(/img(.+)-(.+)/,"$2");
-		var garraryUrlArray = [];
-		var length = obj.parentNode.children.length - 1 ;
-		//親クラスの特定、
-		var garraryElements = obj.parentNode.children;
-
-		console.log(length);
-		console.log(gallerysCount);
-		console.log(galleryImgsCount);
-		console.log(garraryElements);
-
-
-		var openPhotoSwipe = function() {
-	    var pswpElement = document.querySelectorAll('.pswp')[0];
-
-	    // build items array
-	    var items =[]
-	    var hash = {};
-	    var styles = getComputedStyle(obj);
-	    var id = String(obj.id);
-
-	    //garraryに渡す、gararry番号、gararry内画像番号、gararry内画像番号配列、
-		var gallerysCount = id.replace(/img(.+)-(.+)/,"$1");
-		var galleryImgsCount = id.replace(/img(.+)-(.+)/,"$2");
-		var setGoto = galleryImgsCount - 1;
-		var garraryUrlArray = [];
-		var length = obj.parentNode.children.length - 1 ;
-		//親クラスの特定、
-		var garraryElements = obj.parentNode.children;
-
-
-		console.log(setGoto);
-
-		for(var i=0,l= length; i < l; i++) {
-			// figureEl = galleryElements[i];
-			// linkEl = figureEl.children[0];
-			// size = linkEl.getAttribute("data-size").split("x");
-			var tmpurl  = garraryElements[i].style.backgroundImage;
-			var settitle =  garraryElements[i].innerText;
-			console.log(settitle);
-			var seturl = tmpurl.replace(/^url\(|\)/g, "");
-
-			items.push({
-				src: seturl,
-				w: 650,
-				h: 650,
-				msrc: seturl,
-				// el: figureEl,
-				title: settitle
-			});
-
-		}
-
-
-	    console.log(items);
-	    var options = {
-
-	      	history: false,
-	      	focus: false,
-	      	index: setGoto,
-	        showAnimationDuration: 300,
-	        hideAnimationDuration: 300
-
-	    };
-
-	    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-	    gallery.init();
-	};
-
-	openPhotoSwipe();
-	}
-
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflow: {
-            rotate: 10,
-            stretch: 20,
-            depth: 190,
-            modifier: 1,
-            slideShadows : true
-        }
-    });
 
 
 </script>
-
-
-
-
 
 </body>
 </html>
