@@ -112,25 +112,7 @@
         <div class="swiper-pagination"></div>
     </div>
 
-<!-- <h2>画像ギャラリー</h2>
 
-	<h3>figureタグ</h3>
-
-		<figure class="images">
-			<a href="image/escape-20151120-185853-7.jpg" data-size="350x350">
-				<img class="_img size350" src="image/escape-20151120-185853-7.jpg" alt="Syncerのロゴ" />
-			</a>
-			<figcaption>Syncerのロゴ</figcaption>
-		</figure>
-
-	<h3>pタグ</h3>
-
-		<p class="images">
-			<a href="image/escape-20151120-191747-7.jpg" data-size="350x350">
-				<img class="_img size350" src="image/escape-20151120-191747-7.jpg" alt="カピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラ" />
-			</a>
-		</p>
- -->
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -250,22 +232,6 @@
 		console.log(gallerysCount);
 		console.log(galleryImgsCount);
 		console.log(garraryElements);
-		// var exm = [];
-		// var hash = {};
-		// hash['w'] = 650;
-		// hash['h'] = 650;
-
-		// for (var i = 0; i < length; i++  ) {
-		// 	var tmpurl  = garraryElements[i].style.backgroundImage;
-		// 	var seturl = tmpurl.replace(/^url\(|\)/g, "");
-		// 	garraryUrlArray.push(seturl);
-		// 	// hash['src'] = seturl;
-		// 	// exm.push(hash);
-		// }
-		// console.log(garraryUrlArray);
-		// console.log(galleryImgsCount);
-		// console.log(exm);
-
 
 
 		var openPhotoSwipe = function() {
@@ -286,16 +252,7 @@
 		//親クラスの特定、
 		var garraryElements = obj.parentNode.children;
 
-		// for (var i = 0; i < length; i++  ) {
-		// 	var tmpurl  = garraryElements[i].style.backgroundImage;
-		// 	var seturl = tmpurl.replace(/^url\(|\)/g, "");
-		// 	console.log(seturl)
-		// 	garraryUrlArray.push(seturl);
-		// 	hash['src'] = seturl;
-		// 	hash['w'] = 650;
-		// 	hash['h'] = 650;
-		// 	items.push(hash);
-		// }
+
 		console.log(setGoto);
 
 		for(var i=0,l= length; i < l; i++) {
@@ -303,6 +260,8 @@
 			// linkEl = figureEl.children[0];
 			// size = linkEl.getAttribute("data-size").split("x");
 			var tmpurl  = garraryElements[i].style.backgroundImage;
+			var settitle =  garraryElements[i].innerText;
+			console.log(settitle);
 			var seturl = tmpurl.replace(/^url\(|\)/g, "");
 
 			items.push({
@@ -311,7 +270,7 @@
 				h: 650,
 				msrc: seturl,
 				// el: figureEl,
-				title: "testtesttesttesttesttesttesttesttesttest"
+				title: settitle
 			});
 
 		}
