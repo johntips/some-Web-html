@@ -20,12 +20,27 @@ body {
     .card{
 
     }
+    .thumarea{
+      margin-top:30px;
+      margin-left: 5%;
+    }
+    .museicon{
+        width: 30px;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+    }
+    .maincaption{
+      color: rgb(3,3,3);
+    }
     .caption{
       margin-top:370px;
     }
     .swipe-caption{
       margin-top: 350px;
-      color :rgba(0,0,0,0);
+      color: rgba(0,0,0,0);
+      width: 350px;
+      margin-left: -30px;
     }
     .swiper-slide-active .swipe-caption{
       color: rgba(10,24,24,0.5);
