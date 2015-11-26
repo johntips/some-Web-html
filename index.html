@@ -5,21 +5,19 @@
     <title>Swiper demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0",user-scalable=yes>
 
-    <!-- Link Swiper's CSS -->
+    <!-- Link Swiper -->
     <link rel="stylesheet" href="css/swiper.min.css">
-
-    <!-- Demo styles -->
-
-	<script type="text/javascript">
-		if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
-			document.write('<link rel="stylesheet" type="text/css" href="css/iphone.css">');
-		}else {
-		        document.write('<link rel="stylesheet" type="text/css" href="css/pc.css">');
-		    }
-	</script>
-	<!-- CSSの読み込み -->
+	<!-- Link Photoswiper -->
 	<link rel="stylesheet" href="css/photoswipe.css">
 	<link rel="stylesheet" href="css/default-skin.css">
+	<!-- Adjust device css -->
+	<script type="text/javascript">
+	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+		document.write('<link rel="stylesheet" type="text/css" href="css/iphone.css">');
+	}else {
+	        document.write('<link rel="stylesheet" type="text/css" href="css/pc.css">');
+	    }
+	</script>
 
 </head>
 <body>
@@ -28,13 +26,13 @@
 
         <div class="swiper-wrapper">
 
- 			<div id="img1-1" class="swiper-slide " style="background-image:url(image/escape-20151120-190233-7.jpg)" onclick="klikaj(this)">
+ 			<div id="img1-1" class="swiper-slide " style="background-image:url(image/escape-20151120-190233-7.jpg)" onclick="openGarraly(this)">
  				<p class="swipe-caption">BBQブロックパーティーで私たちがオーダーしたお店は、『Sea Grill』のFiesta Plate。
 1プレートでお腹がしっかりと満たされる盛り沢山な内容のプレートのお値段＄12。
 お友達同士で行ってシェアするのがおすすめです☆
 </p>
  			</div>
-            <div id="img1-2" class="swiper-slide" style="background-image:url(image/escape-20151120-191747-7.jpg)" onclick="klikaj(this)">
+            <div id="img1-2" class="swiper-slide" style="background-image:url(image/escape-20151120-191747-7.jpg)" onclick="openGarraly(this)">
             	<p class="swipe-caption">マッチョなお兄様たちが、手際よくBOXに詰めてくれます。</p>
             </div>
             <div id="img1-3" class="swiper-slide" style="background-image:url(image/escape-20151120-185948-7.jpg)">
@@ -114,7 +112,7 @@
         <div class="swiper-pagination"></div>
     </div>
 
-<h2>画像ギャラリー</h2>
+<!-- <h2>画像ギャラリー</h2>
 
 	<h3>figureタグ</h3>
 
@@ -129,42 +127,90 @@
 
 		<p class="images">
 			<a href="image/escape-20151120-191747-7.jpg" data-size="350x350">
-				<img class="_img size350" src="image/escape-20151120-191747-7.jpg" alt="カピバラ" />
+				<img class="_img size350" src="image/escape-20151120-191747-7.jpg" alt="カピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラカピバラ" />
 			</a>
 		</p>
+ -->
 
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
 
-<HR style="margin: 3em 0 ;">
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
 
-<div id="scrolling">
-<ul>
-    <li>
-        Slide #1
-    </li>
-    <li>
-        Slide #2
-    </li>
-</ul>
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <div class="pswp__container">
+            <!-- don't modify these 3 pswp__item elements, data is added later on -->
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
 </div>
-<form action="#">
-    <input type="button" name="btn" value="クリック" onclick="btnClick(this)" />
-</form>
-<div id="thumb0" class="thumbs" onclick="klikaj('rad1')">knock knock</div>
-​<div id="rad1" style="visibility: hidden">hello world</div>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
 
     <!-- Swiper JS -->
 <script src="js/swiper.min.js"></script>
 <script src="http://itemslide.github.io/dist/itemslide.min.js"></script>
-
+<script src='js/photoswipe.min.js'></script>
+<script src='js/photoswipe-ui-default.min.js'></script>
     <!-- Initialize Swiper -->
 <script>
 	function klikaj(obj) {
-	    alert(obj.style);
+
 	    var styles = getComputedStyle(obj);
 	    var id = String(obj.id);
 
-	    //
+	    //garraryに渡す、gararry番号、gararry内画像番号、gararry内画像番号配列、
 		var gallerysCount = id.replace(/img(.+)-(.+)/,"$1");
 		var galleryImgsCount = id.replace(/img(.+)-(.+)/,"$2");
 		var garraryUrlArray = [];
@@ -182,11 +228,112 @@
 			var tmpurl  = garraryElements[i].style.backgroundImage;
 			var seturl = tmpurl.replace(/^url\(|\)/g, "");
 			garraryUrlArray.push(seturl);
-			console.log(garraryUrlArray);
 		}
+		console.log(garraryUrlArray);
 
 	}
+	function openGarraly(obj){
 
+
+		var styles = getComputedStyle(obj);
+	    var id = String(obj.id);
+
+	    //garraryに渡す、gararry番号、gararry内画像番号、gararry内画像番号配列、
+		var gallerysCount = id.replace(/img(.+)-(.+)/,"$1");
+		var galleryImgsCount = id.replace(/img(.+)-(.+)/,"$2");
+		var garraryUrlArray = [];
+		var length = obj.parentNode.children.length - 1 ;
+		//親クラスの特定、
+		var garraryElements = obj.parentNode.children;
+
+		console.log(length);
+		console.log(gallerysCount);
+		console.log(galleryImgsCount);
+		console.log(garraryElements);
+		// var exm = [];
+		// var hash = {};
+		// hash['w'] = 650;
+		// hash['h'] = 650;
+
+		// for (var i = 0; i < length; i++  ) {
+		// 	var tmpurl  = garraryElements[i].style.backgroundImage;
+		// 	var seturl = tmpurl.replace(/^url\(|\)/g, "");
+		// 	garraryUrlArray.push(seturl);
+		// 	// hash['src'] = seturl;
+		// 	// exm.push(hash);
+		// }
+		// console.log(garraryUrlArray);
+		// console.log(galleryImgsCount);
+		// console.log(exm);
+
+
+
+		var openPhotoSwipe = function() {
+	    var pswpElement = document.querySelectorAll('.pswp')[0];
+
+	    // build items array
+	    var items =[]
+	    var hash = {};
+	    var styles = getComputedStyle(obj);
+	    var id = String(obj.id);
+
+	    //garraryに渡す、gararry番号、gararry内画像番号、gararry内画像番号配列、
+		var gallerysCount = id.replace(/img(.+)-(.+)/,"$1");
+		var galleryImgsCount = id.replace(/img(.+)-(.+)/,"$2");
+		var setGoto = galleryImgsCount - 1;
+		var garraryUrlArray = [];
+		var length = obj.parentNode.children.length - 1 ;
+		//親クラスの特定、
+		var garraryElements = obj.parentNode.children;
+
+		// for (var i = 0; i < length; i++  ) {
+		// 	var tmpurl  = garraryElements[i].style.backgroundImage;
+		// 	var seturl = tmpurl.replace(/^url\(|\)/g, "");
+		// 	console.log(seturl)
+		// 	garraryUrlArray.push(seturl);
+		// 	hash['src'] = seturl;
+		// 	hash['w'] = 650;
+		// 	hash['h'] = 650;
+		// 	items.push(hash);
+		// }
+		console.log(setGoto);
+
+		for(var i=0,l= length; i < l; i++) {
+			// figureEl = galleryElements[i];
+			// linkEl = figureEl.children[0];
+			// size = linkEl.getAttribute("data-size").split("x");
+			var tmpurl  = garraryElements[i].style.backgroundImage;
+			var seturl = tmpurl.replace(/^url\(|\)/g, "");
+
+			items.push({
+				src: seturl,
+				w: 650,
+				h: 650,
+				msrc: seturl,
+				// el: figureEl,
+				title: "testtesttesttesttesttesttesttesttesttest"
+			});
+
+		}
+
+
+	    console.log(items);
+	    var options = {
+
+	      	history: false,
+	      	focus: false,
+	      	index: setGoto,
+	        showAnimationDuration: 300,
+	        hideAnimationDuration: 300
+
+	    };
+
+	    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+	    gallery.init();
+	};
+
+	openPhotoSwipe();
+	}
 
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
@@ -203,31 +350,10 @@
         }
     });
 
-	var carousel;
-	carousel = $("ul");
-	carousel.itemslide(
-	    {
-	        disable_slide: true,
-	        duration: 1500
-	    }
-	);
-	console.log(carousel.getActiveIndex());
-		carousel.on('changePos', function(e) {
-	        console.log("new pos: "+ carousel.getCurrentPos());
-	});
-
-	carousel.on('swipeout', function(event) {
-	        console.log("swiped out slide - "+ event.slide);
-	});
-
 
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="js/photoswipe.min.js"></script>
-<script src="js/photoswipe-ui-default.min.js"></script>
-<script src="js/fire-photoswipe-customize.js"></script>
 
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
 
 
 
