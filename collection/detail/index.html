@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0",user-scalable=yes>
+
+    <!-- Reset Css UserAgent Style -->
+    <link rel="stylesheet" href="../../css/reset.css">
+    <!-- Link Swiper -->
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <!-- Link Photoswiper -->
+    <link rel="stylesheet" href="../../css/photoswipe.css">
+    <link rel="stylesheet" href="../../css/default-skin.css">
+    <!-- Adjust device css -->
+    <script type="text/javascript">
+    if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+        document.write('<link rel="stylesheet" type="text/css" href="../../css/iphone.css">');
+    }else {
+            document.write('<link rel="stylesheet" type="text/css" href="../../css/pc.css">');
+        }
+    </script>
+
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="menu">
+        <img class="logo" src="../../image/tabimuse_logo.png">
+        <div class="menulist">
+        <a href="../../timeline/index.html">
+            <img class="timeline" src="../../image/timeline.png">
+        </a>
+        <a href="../../collection/index.html">
+            <img class="collection" src="../../image/collection-pink.png">
+        </a>
+        <a href="../../muse/index.html">
+            <img class="muse" src="../../image/muse.png">
+        </a>
+        </div>
+    </div>
+    <div class="cardview">
+        <div class="thumbarea-collection-detail">
+            <div class="panel">
+                <div class="panel-in">
+                    <div class="panel-main">
+                        いつかは行ってみたいと、ずっと思っていたドバイ。<br>
+                        今回は素敵なご縁をいただき、ドバイ政府観光・商務局様にご招待いただき、MUSE五人で取材に行ってきました。
+                        埼玉県くらいの大きさの中に、見上げるほど高いビル群は、青々しく透き通った海、何もない砂漠・・・様々な顔を持っているドバイの魅力に、もう言葉にならないくらいはまってしまいました。<br>
+                        『ドバイって物価がすごく高そう』、『民族衣装に見に包んだ人たちはどんな人なんだろう』、こんな不安がいつの間にか取り除かれて、心の底から『やっぱり旅って素晴らしい！』と思わせてくれるほど、感動的な旅でした。
+                        ラグジュアリーホテルに絶品グルメ、観光、砂漠にラクダ！盛りだくさんな内容のコレクションを是非お楽しみください。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="area-collection-detail">
+            <p class="username-collection-deail">Nami Nonomura</p>
+            <!-- <p class="location">Waikiki Beach</p> -->
+            <img class="museicon-collection-detail" src="https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/profile-11-20151012143506.jpg">
+        </div>
+
+
+
+        <div class="timeline-detail">
+            <div class="spotarea">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <p class="day">1stDay</p>
+                <p class="time">AM9:00</p>
+                <img class="location-icon" src="../../image/icon-location-gray.png">
+                <p class="location-area">Dobai</p>
+                <p class="topcaption">ホテルから車で10分、グアムの大人気サンセット
+                    スポット、『The Beach』へ。
+                    到着した頃はちょうど空がオレンジに染まっていて、
+                    たくさんの人たちで賑わっていました。
+                    到着したその日に、こんなに美しいサンセットタイ
+                    ムを満喫できるのも、グアムの魅力です。
+                    定期的に街を運行するシャトルバスも、お店の前で
+                    停まります☆
+                    ドリンクのお値段は＄4〜ととってもリーズナブル☆
+                </p>
+            </div>
+             <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div id="img1-1" class="swiper-slide " style="background-image:url(../../image/escape-20151120-190233-7.jpg)" onclick="openGarraly(this)">
+                    <p class="swipe-caption">BBQブロックパーティーで私たちがオーダーしたお店は、『Sea Grill』のFiesta Plate。
+                    1プレートでお腹がしっかりと満たされる盛り沢山な内容のプレートのお値段＄12。
+                    お友達同士で行ってシェアするのがおすすめです☆
+                    </p>
+                    </div>
+                    <div id="img1-2" class="swiper-slide" style="background-image:url(../../image/escape-20151120-190233-7.jpg)" onclick="openGarraly(this)">
+                        <p class="swipe-caption">マッチョなお兄様たちが、手際よくBOXに詰めてくれます。</p>
+                    </div>
+                    <div id="img1-3" class="swiper-slide" style="background-image:url(../../image/escape-20151120-190233-7.jpg)" onclick="openGarraly(this)">
+                        <p class="swipe-caption">ご満悦の美紀ぷん♡</p>
+                    </div>
+                    <div id="img1-4" class="swiper-slide" style="background-image:url(../../image/escape-20151120-190233-7.jpg" onclick="openGarraly(this)">
+                        <p class="swipe-caption">メイン度通りのど真ん中を歩行者天国に！
+                    帰りは車が激混みなのでご注意を。</p>
+                    </div>
+                    <div id="img1-5" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)" onclick="openGarraly(this)">
+                        <p class="swipe-caption">インスタで作ったのは貼れた。
+                    つまり容量で制限かけてる説濃厚</p>
+                    </div>
+                    <div id="img1-6" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)" onclick="openGarraly(this)">
+                        <p class="swipe-caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination top20"></div> -->
+
+            </div>
+            <div class="bottomarea-collection-detail">
+                <div class="iinearea">
+                    <img class="heart" src="../../image/heart-pink.png">
+                    <p class="iine">いいね　28件</p>
+                </div>
+                <div class="captionarea">
+                    <p class="indexcaption">キャプションを表示</p>
+                </div>
+            </div>
+        </div>
+                <div class="timeline-detail">
+            <div class="spotarea">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <p class="day">1stDay</p>
+                <p class="time">AM9:00</p>
+                <img class="location-icon" src="../../image/icon-location-gray.png">
+                <p class="location-area">Dobai</p>
+                <p class="topcaption">ホテルから車で10分、グアムの大人気サンセット
+                    スポット、『The Beach』へ。
+                    到着した頃はちょうど空がオレンジに染まっていて、
+                    たくさんの人たちで賑わっていました。
+                    到着したその日に、こんなに美しいサンセットタイ
+                    ムを満喫できるのも、グアムの魅力です。
+                    定期的に街を運行するシャトルバスも、お店の前で
+                    停まります☆
+                    ドリンクのお値段は＄4〜ととってもリーズナブル☆
+                </p>
+            </div>
+             <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div id="img1-1" class="swiper-slide " style="background-image:url(../../image/escape-20151120-190233-7.jpg)" onclick="openGarraly(this)">
+                    <p class="swipe-caption">BBQブロックパーティーで私たちがオーダーしたお店は、『Sea Grill』のFiesta Plate。
+                    1プレートでお腹がしっかりと満たされる盛り沢山な内容のプレートのお値段＄12。
+                    お友達同士で行ってシェアするのがおすすめです☆
+                    </p>
+                    </div>
+                    <div id="img1-2" class="swiper-slide" style="background-image:url(../../image/escape-20151120-190233-7.jpg)" onclick="openGarraly(this)">
+                        <p class="swipe-caption">マッチョなお兄様たちが、手際よくBOXに詰めてくれます。</p>
+                    </div>
+                    <div id="img1-3" class="swiper-slide" style="background-image:url(../../image/escape-20151120-190233-7.jpg)" onclick="openGarraly(this)">
+                        <p class="swipe-caption">ご満悦の美紀ぷん♡</p>
+                    </div>
+                    <div id="img1-4" class="swiper-slide" style="background-image:url(../../image/escape-20151120-190233-7.jpg" onclick="openGarraly(this)">
+                        <p class="swipe-caption">メイン度通りのど真ん中を歩行者天国に！
+                    帰りは車が激混みなのでご注意を。</p>
+                    </div>
+                    <div id="img1-5" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)" onclick="openGarraly(this)">
+                        <p class="swipe-caption">インスタで作ったのは貼れた。
+                    つまり容量で制限かけてる説濃厚</p>
+                    </div>
+                    <div id="img1-6" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)" onclick="openGarraly(this)">
+                        <p class="swipe-caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination top20"></div> -->
+
+            </div>
+            <div class="bottomarea-collection-detail">
+                <div class="iinearea">
+                    <img class="heart" src="../../image/heart-pink.png">
+                    <p class="iine">いいね　28件</p>
+                </div>
+                <div class="captionarea">
+                    <p class="indexcaption">キャプションを表示</p>
+                </div>
+            </div>
+        </div>
+                <div class="timeline-detail">
+            <div class="spotarea">
+                <div class="circle"></div>
+                <div class="line"></div>
+                <p class="day">1stDay</p>
+                <p class="time">AM9:00</p>
+                <img class="location-icon" src="../../image/icon-location-gray.png">
+                <p class="location-area">Dobai</p>
+                <p class="topcaption">ホテルから車で10分、グアムの大人気サンセット
+                    スポット、『The Beach』へ。
+                    到着した頃はちょうど空がオレンジに染まっていて、
+                    たくさんの人たちで賑わっていました。
+                    到着したその日に、こんなに美しいサンセットタイ
+                    ムを満喫できるのも、グアムの魅力です。
+                    定期的に街を運行するシャトルバスも、お店の前で
+                    停まります☆
+                    ドリンクのお値段は＄4〜ととってもリーズナブル☆
+                </p>
+            </div>
+             <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div id="img1-1" class="swiper-slide " style="background-image:url(../../image/escape-20151120-190233-7.jpg)" onclick="openGarraly(this)">
+                    <p class="swipe-caption">BBQブロックパーティーで私たちがオーダーしたお店は、『Sea Grill』のFiesta Plate。
+                    1プレートでお腹がしっかりと満たされる盛り沢山な内容のプレートのお値段＄12。
+                    お友達同士で行ってシェアするのがおすすめです☆
+                    </p>
+                    </div>
+                    <div id="img1-2" class="swiper-slide" style="background-image:url(../../image/escape-20151120-190233-7.jpg)" onclick="openGarraly(this)">
+                        <p class="swipe-caption">マッチョなお兄様たちが、手際よくBOXに詰めてくれます。</p>
+                    </div>
+                    <div id="img1-3" class="swiper-slide" style="background-image:url(../../image/escape-20151120-190233-7.jpg)" onclick="openGarraly(this)">
+                        <p class="swipe-caption">ご満悦の美紀ぷん♡</p>
+                    </div>
+                    <div id="img1-4" class="swiper-slide" style="background-image:url(../../image/escape-20151120-190233-7.jpg" onclick="openGarraly(this)">
+                        <p class="swipe-caption">メイン度通りのど真ん中を歩行者天国に！
+                    帰りは車が激混みなのでご注意を。</p>
+                    </div>
+                    <div id="img1-5" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)" onclick="openGarraly(this)">
+                        <p class="swipe-caption">インスタで作ったのは貼れた。
+                    つまり容量で制限かけてる説濃厚</p>
+                    </div>
+                    <div id="img1-6" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)" onclick="openGarraly(this)">
+                        <p class="swipe-caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination top20"></div> -->
+
+            </div>
+            <div class="bottomarea-collection-detail">
+                <div class="iinearea">
+                    <img class="heart" src="../../image/heart-pink.png">
+                    <p class="iine">いいね　28件</p>
+                </div>
+                <div class="captionarea">
+                    <p class="indexcaption">キャプションを表示</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <div class="pswp__container">
+            <!-- don't modify these 3 pswp__item elements, data is added later on -->
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+</div>
+
+    <!-- Swiper JS -->
+<script src="../../js/swiper.min.js"></script>
+<script src='../../js/photoswipe.min.js'></script>
+<script src='../../js/photoswipe-ui-default.min.js'></script>
+<script src='../../js/index.js'></script>
+    <!-- Initialize Swiper -->
+<script>
+
+
+
+</script>
+
+</body>
+</html>

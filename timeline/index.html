@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0",user-scalable=yes>
+
+    <!-- Reset Css UserAgent Style -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- Link Swiper -->
+    <link rel="stylesheet" href="../css/swiper.min.css">
+	<!-- Link Photoswiper -->
+	<link rel="stylesheet" href="../css/photoswipe.css">
+	<link rel="stylesheet" href="../css/default-skin.css">
+	<!-- Adjust device css -->
+	<script type="text/javascript">
+	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+		document.write('<link rel="stylesheet" type="text/css" href="../css/iphone.css">');
+	}else {
+	        document.write('<link rel="stylesheet" type="text/css" href="../css/pc.css">');
+	    }
+	</script>
+
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="menu">
+    	<img class="logo" src="../image/tabimuse_logo.png">
+    	<div class="menulist">
+ 		<a href="../timeline/index.html">
+	    	<img class="timeline" src="../image/timeline-pink.png">
+	    </a>
+	    <a href="../collection/index.html">
+	    	<img class="collection" src="../image/collection.png">
+	    </a>
+	    <a href="../muse/index.html">
+	    	<img class="muse" src="../image/muse.png">
+	    </a>
+	    </div>
+    </div>
+    <div class="cardview">
+    	<div class="thumarea">
+    		<p class="username">Nami Nonomura</p>
+    		<p class="location">Waikiki Beach</p>
+    		<img class="museicon" src="https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/profile-11-20151012143506.jpg">
+    	</div>
+	    <p class="maincaption">2日目、早起きしてイルカに会いに行ってきました。
+					念願のドルフィンウォッチング♡<br>
+					朝日が海の向こうから見えてくるタイミングで
+					ホテル横のビーチから船に乗り込み出発。<br>	
+					時刻は朝の6時！
+					島の漁師さんらしきお兄さん達の上手な船頭により、
+					波もあまり感じず、揺れることなく船は進みます。<br>
+					お天気にもよるかもしれませんが、船酔いするひとでも大丈夫な雰囲気。<br>
+					30分くらい経った頃かな、気持ちの良い波の音と揺れに加えて気持ちの良い朝日を浴びていたら
+					ついうとうとしてしまいましたが‥<br>
+					ついに！！！<br>
+					" イルカだよ！"<br>
+					との声で、すぐにカメラを持って<br>
+					立ち上がり、目を擦って探してみると…<br>
+					たくさんいる♡<br>
+					この日は運よく何度もたくさんの群れに遭遇できました！！！！！！<br>
+					前にほかの国で見た時は、数頭しか会えず、<br>
+					その上にきつい船酔いで微かにしかその姿が見えなかった苦い思い出があったので。。。<br>
+					ムービーに集中していたので写真があまりとれていませんが、小さくジャンプしてるイルカをキャッチしていました。
+					ボホール島に行ったら是非、早起きして参加するべきツアーだと思います！<br>
+					この後はイルカとバイバイして、船はバリカサグ島というところへ向かいます！</p>
+					<div class="tagarea">
+					<a class="tag">#ハワイ </a><a class="tag">#女子旅 </a><a class="tag">#リゾート </a><a class="tag">#癒やし </a>
+					</div>
+   		 <div class="swiper-container">
+	        <div class="swiper-wrapper">
+	 			<div id="img1-1" class="swiper-slide " style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192422-7.jpg)" onclick="openGarraly(this)">
+ 				<p class="swipe-caption">BBQブロックパーティーで私たちがオーダーしたお店は、『Sea Grill』のFiesta Plate。
+				1プレートでお腹がしっかりと満たされる盛り沢山な内容のプレートのお値段＄12。
+				お友達同士で行ってシェアするのがおすすめです☆
+				</p>
+	 			</div>
+	            <div id="img1-2" class="swiper-slide" style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192024-7.jpg)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">マッチョなお兄様たちが、手際よくBOXに詰めてくれます。</p>
+	            </div>
+	            <div id="img1-3" class="swiper-slide" style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192335-7.jpg)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">ご満悦の美紀ぷん♡</p>
+	            </div>
+	            <div id="img1-4" class="swiper-slide" style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192422-7.jpg)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">メイン度通りのど真ん中を歩行者天国に！
+				帰りは車が激混みなのでご注意を。</p>
+	            </div>
+	            <div id="img1-5" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">インスタで作ったのは貼れた。
+				つまり容量で制限かけてる説濃厚</p>
+	            </div>
+	            <div id="img1-6" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
+	            </div>
+	        </div>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination top20"></div>
+	       
+		</div>
+		<div class="bottomarea">
+			<div class="iinearea">
+		 		<img class="heart" src="../image/heart-pink.png">
+		 		<p class="iine">いいね　28件</p>
+		 	</div>
+		 	<div class="captionarea">
+		 		<p class="indexcaption">キャプションを表示</p>
+		 	</div>
+	    </div>
+	</div>
+	    <div class="cardview">
+    	<div class="thumarea">
+    		<p class="username">Nami Nonomura</p>
+    		<p class="location">Waikiki Beach</p>
+    		<img class="museicon" src="https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/profile-11-20151012143506.jpg">
+    	</div>
+	    <p class="maincaption">2日目、早起きしてイルカに会いに行ってきました。
+					念願のドルフィンウォッチング♡<br>
+					朝日が海の向こうから見えてくるタイミングで
+					ホテル横のビーチから船に乗り込み出発。<br>	
+					時刻は朝の6時！
+					島の漁師さんらしきお兄さん達の上手な船頭により、
+					波もあまり感じず、揺れることなく船は進みます。<br>
+					お天気にもよるかもしれませんが、船酔いするひとでも大丈夫な雰囲気。<br>
+					30分くらい経った頃かな、気持ちの良い波の音と揺れに加えて気持ちの良い朝日を浴びていたら
+					ついうとうとしてしまいましたが‥<br>
+					ついに！！！<br>
+					" イルカだよ！"<br>
+					との声で、すぐにカメラを持って<br>
+					立ち上がり、目を擦って探してみると…<br>
+					たくさんいる♡<br>
+					この日は運よく何度もたくさんの群れに遭遇できました！！！！！！<br>
+					前にほかの国で見た時は、数頭しか会えず、<br>
+					その上にきつい船酔いで微かにしかその姿が見えなかった苦い思い出があったので。。。<br>
+					ムービーに集中していたので写真があまりとれていませんが、小さくジャンプしてるイルカをキャッチしていました。
+					ボホール島に行ったら是非、早起きして参加するべきツアーだと思います！<br>
+					この後はイルカとバイバイして、船はバリカサグ島というところへ向かいます！</p>
+   		 <div class="swiper-container">
+	        <div class="swiper-wrapper">
+	 			<div id="img1-1" class="swiper-slide " style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192422-7.jpg)" onclick="openGarraly(this)">
+ 				<p class="swipe-caption">BBQブロックパーティーで私たちがオーダーしたお店は、『Sea Grill』のFiesta Plate。
+				1プレートでお腹がしっかりと満たされる盛り沢山な内容のプレートのお値段＄12。
+				お友達同士で行ってシェアするのがおすすめです☆
+				</p>
+	 			</div>
+	            <div id="img1-2" class="swiper-slide" style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192024-7.jpg)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">マッチョなお兄様たちが、手際よくBOXに詰めてくれます。</p>
+	            </div>
+	            <div id="img1-3" class="swiper-slide" style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192335-7.jpg)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">ご満悦の美紀ぷん♡</p>
+	            </div>
+	            <div id="img1-4" class="swiper-slide" style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192422-7.jpg)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">メイン度通りのど真ん中を歩行者天国に！
+				帰りは車が激混みなのでご注意を。</p>
+	            </div>
+	            <div id="img1-5" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">インスタで作ったのは貼れた。
+				つまり容量で制限かけてる説濃厚</p>
+	            </div>
+	            <div id="img1-6" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
+	            </div>
+	        </div>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination top20"></div>
+		</div>
+	</div>
+	    <div class="cardview">
+    	<div class="thumarea">
+    		<p class="username">Nami Nonomura</p>
+    		<p class="location">Waikiki Beach</p>
+    		<img class="museicon" src="https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/profile-11-20151012143506.jpg">
+    	</div>
+	    <p class="maincaption">2日目、早起きしてイルカに会いに行ってきました。
+					念願のドルフィンウォッチング♡<br>
+					朝日が海の向こうから見えてくるタイミングで
+					ホテル横のビーチから船に乗り込み出発。<br>	
+					時刻は朝の6時！
+					島の漁師さんらしきお兄さん達の上手な船頭により、
+					波もあまり感じず、揺れることなく船は進みます。<br>
+					お天気にもよるかもしれませんが、船酔いするひとでも大丈夫な雰囲気。<br>
+					30分くらい経った頃かな、気持ちの良い波の音と揺れに加えて気持ちの良い朝日を浴びていたら
+					ついうとうとしてしまいましたが‥<br>
+					ついに！！！<br>
+					" イルカだよ！"<br>
+					との声で、すぐにカメラを持って<br>
+					立ち上がり、目を擦って探してみると…<br>
+					たくさんいる♡<br>
+					この日は運よく何度もたくさんの群れに遭遇できました！！！！！！<br>
+					前にほかの国で見た時は、数頭しか会えず、<br>
+					その上にきつい船酔いで微かにしかその姿が見えなかった苦い思い出があったので。。。<br>
+					ムービーに集中していたので写真があまりとれていませんが、小さくジャンプしてるイルカをキャッチしていました。
+					ボホール島に行ったら是非、早起きして参加するべきツアーだと思います！<br>
+					この後はイルカとバイバイして、船はバリカサグ島というところへ向かいます！</p>
+   		 <div class="swiper-container">
+	        <div class="swiper-wrapper">
+	 			<div id="img1-1" class="swiper-slide " style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192422-7.jpg)" onclick="openGarraly(this)">
+ 				<p class="swipe-caption">BBQブロックパーティーで私たちがオーダーしたお店は、『Sea Grill』のFiesta Plate。
+				1プレートでお腹がしっかりと満たされる盛り沢山な内容のプレートのお値段＄12。
+				お友達同士で行ってシェアするのがおすすめです☆
+				</p>
+	 			</div>
+	            <div id="img1-2" class="swiper-slide" style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192024-7.jpg)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">マッチョなお兄様たちが、手際よくBOXに詰めてくれます。</p>
+	            </div>
+	            <div id="img1-3" class="swiper-slide" style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192335-7.jpg)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">ご満悦の美紀ぷん♡</p>
+	            </div>
+	            <div id="img1-4" class="swiper-slide" style="background-image:url(https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/escape-20151120-192422-7.jpg)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">メイン度通りのど真ん中を歩行者天国に！
+				帰りは車が激混みなのでご注意を。</p>
+	            </div>
+	            <div id="img1-5" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">インスタで作ったのは貼れた。
+				つまり容量で制限かけてる説濃厚</p>
+	            </div>
+	            <div id="img1-6" class="swiper-slide" style="background-image:url(https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)" onclick="openGarraly(this)">
+	            	<p class="swipe-caption">文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列文字列</p>
+	            </div>
+	        </div>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination top20"></div>
+		</div>
+	</div>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <div class="pswp__container">
+            <!-- don't modify these 3 pswp__item elements, data is added later on -->
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+</div>
+
+    <!-- Swiper JS -->
+<script src="../js/swiper.min.js"></script>
+<script src='../js/photoswipe.min.js'></script>
+<script src='../js/photoswipe-ui-default.min.js'></script>
+<script src='../js/index.js'></script>
+    <!-- Initialize Swiper -->
+<script>
+
+
+
+</script>
+
+</body>
+</html>

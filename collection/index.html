@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0",user-scalable=yes>
+
+    <!-- Reset Css UserAgent Style -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- Link Swiper -->
+    <link rel="stylesheet" href="../css/swiper.min.css">
+	<!-- Link Photoswiper -->
+	<link rel="stylesheet" href="../css/photoswipe.css">
+	<link rel="stylesheet" href="../css/default-skin.css">
+	<!-- Adjust device css -->
+	<script type="text/javascript">
+	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+		document.write('<link rel="stylesheet" type="text/css" href="../css/iphone.css">');
+	}else {
+	        document.write('<link rel="stylesheet" type="text/css" href="../css/pc.css">');
+	    }
+	</script>
+
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="menu">
+    	<img class="logo" src="../image/tabimuse_logo.png">
+    	<div class="menulist">
+ 		<a href="../timeline/index.html">
+	    	<img class="timeline" src="../image/timeline.png">
+	    </a>
+	    <a href="../collection/index.html">
+	    	<img class="collection" src="../image/collection-pink.png">
+	    </a>
+	    <a href="../muse/index.html">
+	    	<img class="collection" src="../image/muse.png">
+	    </a>
+	    </div>
+    </div>
+    <div class="cardview">
+    	<div class="thumarea-collection">
+    		<p class="username-collection">Nami Nonomura</p>
+    		<!-- <p class="location">Waikiki Beach</p> -->
+    		<img class="museicon-collection" src="https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/profile-11-20151012143506.jpg">
+    	</div>
+    	<p class="maincaption-collection">ドバイをカジュアルに楽しもう！女子旅ドバイのすすめ☆</p>
+    	<a href="detail/index.html">
+			<img class="thumbnail-collection" src="../image/escape-20151120-190233-7.jpg">
+		</a>
+		<div class="bottomarea-collection">
+			<div class="iinearea-collection">
+		 		<img class="heart-collection" src="../image/heart-pink.png">
+		 		<p class="iine-collection">いいね　28件</p>
+		 	</div>
+	    </div>
+	</div>
+    <div class="cardview">
+    	<div class="thumarea-collection">
+    		<p class="username-collection">Nami Nonomura</p>
+    		<!-- <p class="location">Waikiki Beach</p> -->
+    		<img class="museicon-collection" src="https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/profile-11-20151012143506.jpg">
+    	</div>
+    	<p class="maincaption-collection">ドバイをカジュアルに楽しもう！女子旅ドバイのすすめ☆</p>
+    	<a href="detail/index.html">
+			<img class="thumbnail-collection" src="../image/escape-20151120-190233-7.jpg">
+		</a>
+		<div class="bottomarea-collection">
+			<div class="iinearea-collection">
+		 		<img class="heart-collection" src="../image/heart-pink.png">
+		 		<p class="iine-collection">いいね　28件</p>
+		 	</div>
+	    </div>
+	</div>
+	    <div class="cardview">
+    	<div class="thumarea-collection">
+    		<p class="username-collection">Nami Nonomura</p>
+    		<!-- <p class="location">Waikiki Beach</p> -->
+    		<img class="museicon-collection" src="https://s3-ap-northeast-1.amazonaws.com/stg.image.tabi-muse/img/profile-11-20151012143506.jpg">
+    	</div>
+    	<p class="maincaption-collection">ドバイをカジュアルに楽しもう！女子旅ドバイのすすめ☆</p>
+		 <a href="detail/index.html">
+			<img class="thumbnail-collection" src="../image/escape-20151120-190233-7.jpg">
+		</a>
+		<div class="bottomarea-collection">
+			<div class="iinearea-collection">
+		 		<img class="heart-collection" src="../image/heart-pink.png">
+		 		<p class="iine-collection">いいね　28件</p>
+		 	</div>
+	    </div>
+	</div>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <div class="pswp__container">
+            <!-- don't modify these 3 pswp__item elements, data is added later on -->
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+</div>
+
+    <!-- Swiper JS -->
+<script src="../js/swiper.min.js"></script>
+<script src='../js/photoswipe.min.js'></script>
+<script src='../js/photoswipe-ui-default.min.js'></script>
+<script src='../js/index.js'></script>
+    <!-- Initialize Swiper -->
+<script>
+
+
+
+</script>
+
+</body>
+</html>
