@@ -2451,17 +2451,23 @@
                     var background = _img.attr('data-background');
                     var src = _img.attr('data-src'),
                         srcset = _img.attr('data-srcset');
+                        alert("あああああああ");
                     s.loadImage(_img[0], (src || background), srcset, false, function () {
                         if (background) {
+                            alert("あああああああ");
                             _img.css('background-image', 'url(' + background + ')');
                             _img.removeAttr('data-background');
                         }
                         else {
                             if (srcset) {
+                                console.log("ここどうなってん？");
+                                console.log(srcset);
                                 _img.attr('srcset', srcset);
                                 _img.removeAttr('data-srcset');
                             }
                             if (src) {
+                                console.log("ここどうなってん？");
+                                console.log(src);
                                 _img.attr('src', src);
                                 _img.removeAttr('data-src');
                             }

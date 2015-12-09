@@ -33,8 +33,8 @@
             var settitle =  garraryElements[i].innerText;
             console.log(settitle);
 
-            var seturl = tmpurl.replace(/^url\(|\)/g, "");
-            console.log(seturl);
+            var seturl = tmpurl.replace(/^url\(|\)/g, 　"");
+            seturl = seturl.replace(/^\"|\"/g, 　"");
 
             items.push({
                 src: seturl,
