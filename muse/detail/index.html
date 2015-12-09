@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="../../css/reset.css">
     <!-- Link Swiper -->
     <link rel="stylesheet" href="../../css/swiper.min.css">
-	<!-- Link Photoswiper -->
+	 <!-- Link Photoswiper -->
 	<link rel="stylesheet" href="../../css/photoswipe.css">
 	<link rel="stylesheet" href="../../css/default-skin.css">
 	<!-- Adjust device css -->
+
+
+
 	<script type="text/javascript">
 	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
 		document.write('<link rel="stylesheet" type="text/css" href="../../css/iphone.css">');
@@ -20,6 +23,9 @@
 	        document.write('<link rel="stylesheet" type="text/css" href="../../css/pc.css">');
 	    }
 	</script>
+
+
+
 
 </head>
 <body>
@@ -39,7 +45,7 @@
     </div>
     </div>
 
-	    <div class="cardview-muse">
+    <div class="cardview-muse">
         <div class="area-muse-detail">
         	<div class="bottomarea-muse">
 				<div class="iinearea-muse">
@@ -50,18 +56,87 @@
 			 	</div>
 		    </div>
 		    <div class="intro">
-		    	<p class="muse-intro">はじめまして♡旅MUSEのプロデューサーをしています。
-旅を愛する女性たちのお役に立てるサービスを目指して日々
-奮闘中！2〜3ヶ月に一度は海外旅行へ行きます。
-何もせずにプールサイドでボーっとする旅行の過ごし方が好
-きです。</p>
 		    </div>
-        </div>
-	    	<a href="detail/index.html">
-				<img class="thumbnail-muse" src="../../image/escape-20151120-190233-7.jpg">
-			</a>
 
-		</div>
+        <p class="muse-detail-intro">はじめまして♡旅MUSEのプロデューサーをしています。
+          旅を愛する女性たちのお役に立てるサービスを目指して日々
+          奮闘中！2〜3ヶ月に一度は海外旅行へ行きます。
+          何もせずにプールサイドでボーっとする旅行の過ごし方が好
+          きです。
+          </p>
+        </div>
+
+
+<ul class="tab">
+  <li class="litab1 select litab1-selected">TIMELINE</li>
+  <li class="litab2 litab2-notselected">ESCAPE</li>
+
+</ul>
+<ul class="content">
+  <li class="">
+    
+    <div class="row3">
+      <img class="row3-row" src="../../image/escape-20151120-190233-7.jpg">
+      <img class="row3-row" src="../../image/escape-20151120-190233-7.jpg">
+      <img class="row3-row" src="../../image/escape-20151120-190233-7.jpg">
+      <img class="row3-row" src="../../image/escape-20151120-190233-7.jpg">
+      <img class="row3-row" src="../../image/escape-20151120-190233-7.jpg">
+      <img class="row3-row" src="../../image/escape-20151120-190233-7.jpg">
+      <img class="row3-row" src="../../image/escape-20151120-190233-7.jpg">
+      <img class="row3-row" src="../../image/escape-20151120-190233-7.jpg">
+      <img class="row3-row" src="../../image/escape-20151120-190233-7.jpg">
+    </div>
+  </li>
+  <li class="hide">
+  
+<div class="row2">
+  <div class="row2maincontents-muse">
+   <!-- //////////// -->
+    <div class="row2cardview-muse-left">
+        <a href="detail/index.html">
+          <img class="thumbnail-muse" src="../../image/escape-20151120-190233-7.jpg">
+        </a>
+      <div class="bottomarea-muse">
+        <div class="iinearea-muse-detail">
+          <p class="collectionname-muse-detail ">Nami Nonomura</p>
+          
+        </div>
+      </div>
+    </div>
+       <!-- //////////// -->
+    <div class="row2cardview-muse-left">
+        <a href="detail/index.html">
+          <img class="thumbnail-muse" src="../../image/escape-20151120-190233-7.jpg">
+        </a>
+      <div class="bottomarea-muse">
+        <div class="iinearea-muse-detail">
+          <p class="collectionname-muse-detail ">Nami Nonomura</p>
+          
+        </div>
+      </div>
+    </div>
+       <!-- //////////// -->
+    <div class="row2cardview-muse-left">
+        <a href="detail/index.html">
+          <img class="thumbnail-muse" src="../../image/escape-20151120-190233-7.jpg">
+        </a>
+      <div class="bottomarea-muse">
+        <div class="iinearea-muse-detail">
+          <p class="collectionname-muse-detail ">Nami Nonomura</p>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+  </li>
+</ul>
+
+
+
+	</div>
 
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
@@ -131,6 +206,7 @@
 </div>
 
     <!-- Swiper JS -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="../../js/swiper.min.js"></script>
 <script src='../../js/photoswipe.min.js'></script>
 <script src='../../js/photoswipe-ui-default.min.js'></script>
@@ -138,8 +214,45 @@
     <!-- Initialize Swiper -->
 <script>
 
+$(function() {
+  //タブクリックファンクション
+  $('.tab li').click(function() {
+
+    //タブが何番目かを調べ
+    var index = $('.tab li').index(this);
+
+    //コンテンツを一度すべて非表示にし、
+    $('.content li').css("display","none");
+
+    //クリックされたタブと同じ順番のコンテンツを表示します。
+    $('.content li').eq(index).css('display','block');
 
 
+    //一度タブについているクラスselectを消し、
+    $('.tab li').removeClass('select');
+
+    $('.tab li').removeClass('litab1-selected');
+    $('.tab li').removeClass('litab1-notselected');
+    $('.tab li').removeClass('litab2-selected');
+    $('.tab li').removeClass('litab2-notselected');
+
+    // alert(index);
+    if (index == 0) {
+        $('.tab .litab1').addClass('litab1-selected');
+        $('.tab .litab2').addClass('litab2-notselected');
+    } else if (index == 1) {
+        $('.tab .litab1').addClass('litab1-notselected');
+        $('.tab .litab2').addClass('litab2-selected');
+    } else {
+
+    }
+
+
+    //クリックされたタブのみにクラスselectをつけます。
+    $(this).addClass('select');
+
+  });
+});
 </script>
 
 </body>

@@ -228,11 +228,27 @@
         
         // Swiper
         var s = this;
-        
+
+        /////////////////////////////
+        console.log("s swiper start");//log
+        console.log(s);//log
+        /////////////////////////////
         // Params
         s.params = params;
+
+        /////////////////////////////
+        console.log("s.params");//log
+        console.log(s.params);//log
+        /////////////////////////////
+
         s.originalParams = originalParams;
-        
+
+        /////////////////////////////
+        console.log("s.originalParams");//log
+        console.log(s.originalParams);//log
+        /////////////////////////////
+
+
         // Classname
         s.classNames = [];
         /*=========================
@@ -240,18 +256,34 @@
           ===========================*/
         if (typeof $ !== 'undefined' && typeof Dom7 !== 'undefined'){
             $ = Dom7;
+            /////////////////////////////
+            console.log("dom liblary and plugin 1");//log
+            console.log($);//log
+            /////////////////////////////
         }
         if (typeof $ === 'undefined') {
             if (typeof Dom7 === 'undefined') {
                 $ = window.Dom7 || window.Zepto || window.jQuery;
+                /////////////////////////////
+                console.log("dom liblary and plugin 2");//log
+                //console.log($);//log
+                /////////////////////////////
             }
             else {
                 $ = Dom7;
+                /////////////////////////////
+                console.log("dom liblary and plugin 3");//log
+                //console.log($);//log
+                /////////////////////////////
             }
             if (!$) return;
         }
         // Export it to Swiper instance
         s.$ = $;
+        /////////////////////////////
+        console.log("export it to Swiper instance s.$ ");//log
+        console.log(s.$);//log
+        /////////////////////////////
         
         /*=========================
           Breakpoints
@@ -268,6 +300,10 @@
                     }
                 }
             }
+            /////////////////////////////
+            console.log("breakpoiints");//log
+            console.log(breakpoint);//log
+            /////////////////////////////
             return breakpoint || 'max';
         };
         s.setBreakpoint = function () {
@@ -284,12 +320,20 @@
         // Set breakpoint on load
         if (s.params.breakpoints) {
             s.setBreakpoint();
+            /////////////////////////////
+            console.log("set break point s.setBreakpoint ");//log
+            console.log(s.setBreakpoint);//log
+            /////////////////////////////
         }
         
         /*=========================
           Preparation - Define Container, Wrapper and Pagination
           ===========================*/
         s.container = $(container);
+        /////////////////////////////
+        console.log("s.container  ");//log
+        console.log(s.container);//log
+        /////////////////////////////
         if (s.container.length === 0) return;
         if (s.container.length > 1) {
             s.container.each(function () {
@@ -299,10 +343,28 @@
         }
         
         // Save instance in container HTML Element and in data
+
+
         s.container[0].swiper = s;
+        /////////////////////////////
+        console.log("save instance in container html element1");//log
+        console.log(s.container[0].swiper);//log
+        /////////////////////////////
+
         s.container.data('swiper', s);
-        
+
+        /////////////////////////////
+        console.log("save instance in container html element2");//log
+        console.log(s.container.data('swiper', s));//log
+        /////////////////////////////
+
+
         s.classNames.push('swiper-container-' + s.params.direction);
+
+        /////////////////////////////
+        console.log("save instance in container html element3");//log
+        console.log(s.classNames.push('swiper-container-' + s.params.direction));//log
+        /////////////////////////////
         
         if (s.params.freeMode) {
             s.classNames.push('swiper-container-free-mode');
@@ -320,6 +382,10 @@
             if (s.support.transforms3d) {
                 s.params.watchSlidesProgress = true;
                 s.classNames.push('swiper-container-3d');
+                /////////////////////////////
+                console.log("coverflow");//log
+                console.log(s.classNames);//log
+                /////////////////////////////
             }
             else {
                 s.params.effect = 'slide';
@@ -353,10 +419,21 @@
         if (s.params.grabCursor && s.support.touch) {
             s.params.grabCursor = false;
         }
+        /////////////////////////////
+        console.log("grab cursor tatch dicidion");//log
+        console.log(s.params.grabCursor );//log
+        /////////////////////////////
         
         // Wrapper
         s.wrapper = s.container.children('.' + s.params.wrapperClass);
-        
+
+        /////////////////////////////
+        console.log("wrapper");//log
+        console.log(s.wrapper );//log
+        /////////////////////////////
+
+
+
         // Pagination
         if (s.params.pagination) {
             s.paginationContainer = $(s.params.pagination);
@@ -364,7 +441,13 @@
                 s.paginationContainer.addClass('swiper-pagination-clickable');
             }
         }
-        
+
+        /////////////////////////////
+        console.log("pagenation class name");//log
+        console.log(s.paginationContainer.className);//log
+        /////////////////////////////
+
+
         // Is Horizontal
         function isH() {
             return s.params.direction === 'horizontal';
@@ -4076,17 +4159,17 @@
      ===========================*/
     var swiperDomPlugins = ['jQuery', 'Zepto', 'Dom7'];
     for (var i = 0; i < swiperDomPlugins.length; i++) {
-    	if (window[swiperDomPlugins[i]]) {
-    		addLibraryPlugin(window[swiperDomPlugins[i]]);
-    	}
+        if (window[swiperDomPlugins[i]]) {
+            addLibraryPlugin(window[swiperDomPlugins[i]]);
+        }
     }
     // Required DOM Plugins
     var domLib;
     if (typeof Dom7 === 'undefined') {
-    	domLib = window.Dom7 || window.Zepto || window.jQuery;
+        domLib = window.Dom7 || window.Zepto || window.jQuery;
     }
     else {
-    	domLib = Dom7;
+        domLib = Dom7;
     }
 
     /*===========================

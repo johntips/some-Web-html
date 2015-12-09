@@ -461,29 +461,29 @@ body {
       margin: 0 auto;
     }
     .cardview-muse-left{
-      padding: 1px 0 1px 0px;
-      border: 1px solid #e9e9e9;
-      width: 50%;
-
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-      background-color: #ffffff;
-      margin-bottom: 1px;
-      float: left;
+    padding: 1px 0 1px 0px;
+    border: 1px solid #e9e9e9;
+    width: 48%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #ffffff;
+    margin-bottom: 5px;
+    float: left;
+    margin-left: 5px;
 
     }
     .cardview-muse-right{
-      padding: 1px 0 1px 0px;
-      border: 1px solid #e9e9e9;
-      width: 50%;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-      background-color: #ffffff;
-      float: right;
-
-      margin-bottom: 1px;
+    padding: 1px 0 1px 0px;
+    border: 1px solid #e9e9e9;
+    width: 48%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #ffffff;
+    float: right;
+    margin-bottom: 5px;
+    margin-right: 5px;
     }
     .museicon-muse {
       position: relative;
@@ -518,4 +518,281 @@ body {
     }
     .iinearea-muse {
       padding: 10px 0px 5px 0px;
+    }
+
+/*-------muse detail css-------*/
+    .menu-muse{
+      background-color: white;
+    }
+    .cardview-muse{
+            padding: 1px 0 1px 0px;
+      border: 1px solid #e9e9e9;
+      width: 400px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      background-color: #ffffff;
+      margin-top:25px;
+      margin-bottom: 25px;
+    }
+    .area-muse-detail{
+      margin-bottom: 50px;
+     /*border-bottom: 1px solid rgba(128, 128, 128, 0.12);*/
+     padding-bottom: 10px;
+    }
+    .museicon-muse-detail{
+      position: absolute;
+      width: 60px;
+      display: block;
+      border-radius: 60px;
+      -webkit-border-radius: 60px;
+      -moz-border-radius: 60px;
+      top: 20px;
+      left: 15px;
+    }
+    .musename-detail {
+    position: relative;
+    display: block;
+    text-align: left;
+    top: 9px;
+    margin-left: 95px;
+    font-size: 18px;
+    color: rgba(3, 3, 3, 0.40);
+    }
+    .museposition-detail {
+position: relative;
+    display: block;
+    text-align: left;
+    top: 11px;
+    margin-left: 94px;
+    color: rgba(3, 3, 3, 0.40);
+    font-size: 12px;
+    }
+    .musecoporation-detail {
+    position: relative;
+    display: block;
+    text-align: left;
+    top: 13px;
+    margin-left: 95px;
+    font-size: 12px;
+    color: rgba(3, 3, 3, 0.40);
+    }
+    .intro{
+      width: 100%;
+    }
+    .muse-intro{
+      position: relative;
+      display: block;
+      text-align: left;
+      top: 20px;
+      margin-left: 130px;
+      font-size: 15px;
+      color: rgba(3, 3, 3, 0.40);
+    }
+#tabmenu{
+    padding:0px;
+    margin:0px;
+    color:#333;
+    font-size: 11px;
+    width:500px;
+    position:relative;
+}
+
+#tabmenu div#tab{
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+#tabmenu div#tab a{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 100px;
+    display: block;
+    text-decoration:none;
+    color:#333;
+    background:#eee;
+}
+#tabmenu div#tab a:hover{
+    background:#000;
+    color:#fff;
+}
+div#tab_contents{
+    width:500px;
+    overflow:
+    hidden;clear:both;
+}
+div#tab_contents ul{
+    width:2500px;
+    padding:0px;
+    margin:0px;
+}
+div#tab_contents ul li{
+    float: left;
+    width:460px;
+    list-style-type:none;
+    padding:60px  20px  20px 20px;
+    background:#e2e2e2;
+}
+
+
+
+    /*///////////////////////////////*/
+
+
+li.tab{
+
+}
+ul.tab {
+        margin: 0;
+        padding: 0px 10px 0px 10px;
+        position: relative !important;
+        left:0;
+        margin-top:5vh;
+        height:88%;
+        list-style-type: none;
+        overflow: hidden;
+        width: 100%;
+    
+
+    }
+  ul.content {
+        margin: 0;
+        padding: 0;
+        position: relative !important;
+        left:0;
+        margin-top:5vh;
+        height:88%;
+        list-style-type: none;
+        overflow: hidden;
+
+    }
+    .hide {
+      display: none;
+    }
+    .row3-row{
+    width: 32%;
+    }
+    .row2-row{
+      width: 45%;
+    }
+    .row2maincontents-muse{
+      width: 100%;
+      position: relative;
+      margin: 0 auto;
+    }
+    .row2cardview-muse-left{
+    padding: 1px 0px 0px 0px;
+    border: 1px solid #e9e9e9;
+    width: 48%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #ffffff;
+    margin-top: 5px;
+    /* margin-bottom: 25px; */
+    float: left;
+    margin-left: 5px;
+    }
+    .row2cardview-muse-right{
+    padding: 1px 0px 0px 0px;
+    border: 1px solid #e9e9e9;
+    width: 48%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #ffffff;
+    margin-top: 5px;
+    /* margin-bottom: 25px; */
+    float: left;
+    margin-left: 5px;
+    }
+    .litab1{
+background-color: rgba(0,0,0,0);
+    position: relative;
+    /* left: -40%; */
+    width: 50% !important;
+    float: left;
+    text-align: center;
+     font-family: Futura;
+    /*color: rgba(3, 3, 3, 0.40);*/
+    }
+    .litab2{
+    background-color: rgba(0,0,0,0);
+    position: relative;
+    width: 50% !important;
+    text-align: center;
+    float:left;
+     font-family: Futura;
+    /*color: rgba(3, 3, 3, 0.40);*/
+    }
+    .litab1-selected{
+      color: rgba(236,204,191,1);
+      border-top: 1px solid #D0CBD0;
+      border-radius: 0px 10px 0px 0px;
+      border-right: 1px solid #D0CBD0;
+    }
+    .litab2-notselected{
+      color: rgba(3, 3, 3, 0.40);
+      border-bottom: 1px solid #D0CBD0;
+ /*     border-radius: 0px 10px 0px 0px;
+      border-right: 1px solid #D0CBD0;*/
+    }
+    .litab1-notselected{
+      color: rgba(3, 3, 3, 0.40);
+      border-bottom: 1px solid #D0CBD0;
+      /*border-radius: 0px 10px 0px 0px;*/
+      /*border-right: 1px solid #D0CBD0;*/
+    }
+    .litab2-selected{
+      color: rgba(236,204,191,1);
+      border-top: 1px solid #D0CBD0;
+      border-radius: 10px 0px 0px 0px;
+      border-left: 1px solid #D0CBD0;
+    }
+
+    .select{
+      
+    }
+
+    .muse-detail-intro{
+    position: relative;
+    display: block;
+    text-align: left;
+    top: 0px;
+    font-size: 13px;
+    color: rgba(3, 3, 3, 0.40);
+    margin-top: 20px;
+    padding: 10px;
+    }
+
+    .iinearea-muse-detail {
+    padding: 5px 0px 5px 0px;
+}
+    .collectionname-muse-detail {
+    position: relative;
+    display: block;
+    text-align: left;
+    margin-left: 8px;
+    font-size: 12px;
+    color: rgba(3, 3, 3, 0.40);
+}
+
+    .iinearea-muse-detail {
+    padding: 3px 0px 5px 0px;
+}
+
+    .cardview-muse{
+            padding: 1px 0 1px 0px;
+      border: 1px solid #e9e9e9;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      background-color: #ffffff;
+      margin-top:25px;
+      margin-bottom: 25px;
     }
